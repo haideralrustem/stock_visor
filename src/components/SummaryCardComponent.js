@@ -5,11 +5,55 @@ import { Link } from 'react-router-dom';
 
 function SummaryCardComponent() {
   return (
-    <div>
-        
-        <div className="max-w-md w-full lg:flex">
-            <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+    <div className='w-3/4'>
+                        
+        <div className="w-full ">
+            <div className="border-r border-b border-l border-grey-light 
+            justify-between lg:border-l-0 lg:border-t 
+            lg:border-grey-light bg-white rounded-b 
+            lg:rounded-b-none lg:rounded-r p-4 flex leading-normal">
+                
+                <div className="company-name flex mb-1 items-center leading-normal gap-10">
+                    <div className="border-solid border-b-2 border-indigo-300/75 text-black font-bold text-xl mb-2">Company Name</div>
+                    <p className="border-solid border-b-2 border-indigo-300/75 text-grey-darker text-base text-xl mb-2 ml-2">CNA</p>
+                </div>
+
+                <div className="company-info ">
+                    {/* <img className="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"/> */}
+                    <div className="grid grid-cols-3 text-center text-sm">
+                        <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Volume: 102 million</div>
+                        <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Market Cap: 5</div>
+                        <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Year founded: 1995</div>
+                    </div>
+                </div>
+
             </div>
+        </div>
+
+
+
+        <div className="lg:flex">
+
+
+            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
+            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            </div>
+
+            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
+            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            </div>
+
+            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
+            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            </div>
+
+            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
+            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            </div>
+
+            
+
+
             <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div className="mb-8">
                     <p className="text-sm text-grey-dark flex items-center">
@@ -29,6 +73,8 @@ function SummaryCardComponent() {
                     </div>
                 </div>
             </div>
+
+
         </div>
 
     </div>
