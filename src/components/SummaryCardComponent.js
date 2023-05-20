@@ -1,10 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
 
+/** Notes:
+ * - We are using Material UI for UI components
+ */
 function SummaryCardComponent() {
-  return (
+
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(event.target.value );
+    };
+
+
+    return (
     <div className='w-3/4'>
                         
         <div className="w-full ">
@@ -20,7 +36,7 @@ function SummaryCardComponent() {
 
                 <div className="company-info ">
                     {/* <img className="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"/> */}
-                    <div className="grid grid-cols-3 text-center text-sm">
+                    <div className="flex flex-wrap text-center text-sm">
                         <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Volume: 102 million</div>
                         <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Market Cap: 5</div>
                         <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Year founded: 1995</div>
@@ -32,29 +48,58 @@ function SummaryCardComponent() {
 
 
 
-        <div className="lg:flex">
+        <div className="lg:flex h-40 lg:h-52">
 
 
-            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
-            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
+            border-solid border-2 border-indigo-300/75
+            lg:rounded-l text-center overflow-hidden" 
+            title="graph-box">
+                <div>
+
+                    <div className='bottom-card-control m-2'>
+                        <FormControl fullWidth>
+                            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                            <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={age}
+                            label="Age"
+                            onChange={handleChange}
+                            >
+                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem value={20}>Twenty</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                    
+                </div>
             </div>
 
-            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
-            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
+            border-solid border-2 border-indigo-300/75
+            lg:rounded-l text-center overflow-hidden" 
+            title="graph-box">                
             </div>
 
-            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
-            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
+            border-solid border-2 border-indigo-300/75
+            lg:rounded-l text-center overflow-hidden" 
+            title="graph-box">
             </div>
 
-            <div className="mx-1 h-40 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
-            style={ {backgroundImage: "url("+'https://tailwindcss.com/img/card-left.jpg'+")"} } title="Woman holding a mug">
+            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
+            border-solid border-2 border-indigo-300/75
+            lg:rounded-l text-center overflow-hidden" 
+            title="graph-box">
+                
             </div>
 
             
 
 
-            <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            {/* <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div className="mb-8">
                     <p className="text-sm text-grey-dark flex items-center">
                         <svg className="text-grey w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -72,7 +117,7 @@ function SummaryCardComponent() {
                         <p className="text-grey-dark">Aug 18</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
         </div>
