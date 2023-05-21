@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -13,17 +13,28 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
  */
 function SummaryCardComponent() {
 
-    const [age, setAge] = React.useState('');
+    const [years, setYears] = useState(1);
 
     const handleChange = (event) => {
-        setAge(event.target.value );
+        setYears(event.target.value );
     };
 
 
+    // const cardGraphResponsiveWidth = "sm:w-52 md:w-60 lg:w-72 xl:w-72"
+    const cardGraphResponsiveWidth = "sm:w-52 md:w-1/4"
+
+
+    const graphBoxStyle = {
+        width: '24.3%'
+    }
+
     return (
     <div className='w-3/4'>
-                        
-        <div className="w-full ">
+
+        {/* ----------------- */}
+
+        <div className="w-auto ">
+
             <div className="border-r border-b border-l border-grey-light 
             justify-between lg:border-l-0 lg:border-t 
             lg:border-grey-light bg-white rounded-b 
@@ -35,7 +46,7 @@ function SummaryCardComponent() {
                 </div>
 
                 <div className="company-info ">
-                    {/* <img className="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"/> */}
+                    {/* <img className="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_imyearss/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"/> */}
                     <div className="flex flex-wrap text-center text-sm">
                         <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Volume: 102 million</div>
                         <div className='text-center px-4 ml-2 border-solid border-2 border-indigo-300/75 rounded'>Market Cap: 5</div>
@@ -46,30 +57,30 @@ function SummaryCardComponent() {
             </div>
         </div>
 
+        {/* ----------------- */}
+
+        <div className="w-auto md:flex justify-between h-40 lg:h-52">
 
 
-        <div className="lg:flex h-40 lg:h-52">
+            <div className={" flex-none rounded-t lg:rounded-t-none " + 
+            "border-solid border-2 border-indigo-300/75 " +
+            "lg:rounded-l text-center overflow-hidden " }
+            title="graph-box" style={graphBoxStyle}>
 
-
-            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
-            border-solid border-2 border-indigo-300/75
-            lg:rounded-l text-center overflow-hidden" 
-            title="graph-box">
                 <div>
-
                     <div className='bottom-card-control m-2'>
                         <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                            <InputLabel id="demo-simple-select-label">choose view</InputLabel>
                             <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
+                            value={years}
+                            label="choose view"
                             onChange={handleChange}
                             >
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
+                            <MenuItem value={1}>One Year</MenuItem>
+                            <MenuItem value={5}>5 Years</MenuItem>
+                            <MenuItem value={-1}>nope</MenuItem>
                             </Select>
                         </FormControl>
                     </div>
@@ -77,22 +88,22 @@ function SummaryCardComponent() {
                 </div>
             </div>
 
-            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
-            border-solid border-2 border-indigo-300/75
-            lg:rounded-l text-center overflow-hidden" 
-            title="graph-box">                
+            <div className={" flex-none rounded-t lg:rounded-t-none "+
+            "border-solid border-2 border-indigo-300/75 "+
+            "lg:rounded-l text-center overflow-hidden "   }
+            title="graph-box" style={graphBoxStyle}>                
             </div>
 
-            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
-            border-solid border-2 border-indigo-300/75
-            lg:rounded-l text-center overflow-hidden" 
-            title="graph-box">
+            <div className={" flex-none rounded-t lg:rounded-t-none "+
+            "border-solid border-2 border-indigo-300/75 "+
+            "lg:rounded-l text-center overflow-hidden "   }
+            title="graph-box" style={graphBoxStyle}>
             </div>
 
-            <div className="mx-1  lg:w-52 flex-none rounded-t lg:rounded-t-none 
-            border-solid border-2 border-indigo-300/75
-            lg:rounded-l text-center overflow-hidden" 
-            title="graph-box">
+            <div className={" flex-none rounded-t lg:rounded-t-none "+
+            "border-solid border-2 border-indigo-300/75 "+
+            "lg:rounded-l text-center overflow-hidden "   }
+            title="graph-box" style={graphBoxStyle}>
                 
             </div>
 
@@ -111,7 +122,7 @@ function SummaryCardComponent() {
                     <p className="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
                 </div>
                 <div className="flex items-center">
-                    <img className="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"/>
+                    <img className="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_imyearss/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"/>
                     <div className="text-sm">
                         <p className="text-black leading-none">Jonathan Reinink</p>
                         <p className="text-grey-dark">Aug 18</p>

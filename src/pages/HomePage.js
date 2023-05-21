@@ -4,7 +4,7 @@ import ListingCopmonent from '../components/ListingComponent'
 
 function HomePage() {
   return (
-    <div>
+    <div className='mx-24'>
         <HomeInroComponent></HomeInroComponent>
         <ListingCopmonent></ListingCopmonent>
     </div>

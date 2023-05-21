@@ -3,7 +3,7 @@ import SummaryCardComponent from './SummaryCardComponent'
 
 function ListingComponent() {
   return (
-    <div>
+    <div className='mx-1'>
         
         <SummaryCardComponent></SummaryCardComponent>
     </div>
