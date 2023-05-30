@@ -28,6 +28,8 @@ function SummaryCardComponent() {
         width: '24.3%'
     }
 
+    const innerBoxClass = "h-full border-solid border-b-2 border-indigo-300/75 "
+
     return (
     <div className='w-3/4'>
 
@@ -67,26 +69,30 @@ function SummaryCardComponent() {
             "lg:rounded-l text-center overflow-hidden " }
             title="graph-box" style={graphBoxStyle}>
 
-                <div>
+                <div className='sm:h-[78%] lg:h-[78%]'>
+                    <div className={" " + innerBoxClass}></div>
                     <div className='bottom-card-control m-2'>
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">choose view</InputLabel>
-                            <Select
+                            <Select className='sm:h-[23px] lg:h-[30px]'
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={years}
                             label="choose view"
                             onChange={handleChange}
                             >
-                            <MenuItem value={1}>One Year</MenuItem>
-                            <MenuItem value={5}>5 Years</MenuItem>
-                            <MenuItem value={-1}>nope</MenuItem>
+                                <MenuItem value={1}>One Year</MenuItem>
+                                <MenuItem value={5}>5 Years</MenuItem>
+                                <MenuItem value={-1}>nope</MenuItem>
                             </Select>
                         </FormControl>
                     </div>
                     
                 </div>
+
             </div>
+
+
 
             <div className={" flex-none rounded-t lg:rounded-t-none "+
             "border-solid border-2 border-indigo-300/75 "+
