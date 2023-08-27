@@ -1,0 +1,12 @@
+
+Styling:
+
+> Tailwind
+> Material UI
+
+
+Finished:
+
+
+Next:
+- Design the side panel
