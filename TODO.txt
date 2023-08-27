@@ -1,12 +1,9 @@
 
-Styling:
-
-> Tailwind
-> Material UI
-
-
 Finished:
 
 
 Next:
-- Design the side panel
+- Design the side panel:
+	Convert MUI List to our panel
+	Give it fixed position and its own scroll
+	
