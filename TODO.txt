@@ -6,4 +6,7 @@ Next:
 - Design the side panel:
 	Convert MUI List to our panel
 	Give it fixed position and its own scroll
+
+
+- Need to flesh out the filters!
 	

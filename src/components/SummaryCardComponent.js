@@ -31,7 +31,7 @@ function SummaryCardComponent() {
     const innerBoxClass = "h-full border-solid border-b-2 border-indigo-300/75 "
 
     return (
-    <div className='w-[73%]'>
+    <div className='w-[100%]'>
 
         {/* ----------------- */}
 

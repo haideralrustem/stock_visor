@@ -8,7 +8,7 @@ function HomePage() {
     <div className='mx-24'>
         <HomeInroComponent></HomeInroComponent>
         <ListingCopmonent></ListingCopmonent>
-        <SidePanel></SidePanel>
+        
     </div>
   )
 }
