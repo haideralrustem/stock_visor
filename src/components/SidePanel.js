@@ -11,11 +11,15 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
+
+import Slider from '@mui/material/Slider';
+
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { Typography } from '@mui/material';
 
 
 
@@ -30,12 +34,41 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
+
+
 export default function SidePanel() {
 
   const [value, setValue ] = useState("female");
 
   const handleChange=(e)=>{
     setValue(e.target.value);
+  }
+
+  const marks = [
+    {
+      value: 0,
+      label: '0°C',
+    },
+    {
+      value: 20,
+      label: '20°C',
+    },
+    {
+      value: 37,
+      label: '37°C',
+    },
+    {
+      value: 100,
+      label: '100°C',
+    },
+  ];
+  
+  function valuetext(value) {
+    return `${value}°C`;
+  }
+  
+  function valueLabelFormat(value) {
+    return marks.findIndex((mark) => mark.value === value) + 1;
   }
 
   return (
@@ -75,9 +108,29 @@ export default function SidePanel() {
               </FormControl>
               </Item>
             </Grid>
+            
+            {/* next filter */}
 
-            <Grid item xs={6}>
-              <Item>xs=</Item>
+            <Grid item xs={12}>
+              <Item>
+                
+              <Box sx={{ width: 300 }}>
+                <p class="mt-2 text-base leading-7 text-gray-600">
+                  Average Volume
+                </p>
+
+                <Slider
+                  aria-label="Restricted values"
+                  defaultValue={20}
+                  valueLabelFormat={valueLabelFormat}
+                  getAriaValueText={valuetext}
+                  step={null}
+                  valueLabelDisplay="auto"
+                  marks={marks}
+                />
+              </Box>
+
+              </Item>
             </Grid>
             <Grid item xs={4}>
               <Item>xs=</Item>

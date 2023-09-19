@@ -2,13 +2,17 @@ import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 
+import { Provider } from 'react-redux'
+import store from './store';
 
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 
+
 function App() {
   return (
     <div>
+      <Provider store={store}>
         <div className='app'>
 
             <div className='navbar'>
@@ -26,6 +30,7 @@ function App() {
             </div>
 
         </div>
+      </Provider>
     </div>
   )
 }
