@@ -1,0 +1,47 @@
+
+
+
+11/28/2014
+
+
+
+
+9/8/2014
+
+9/8/2013
+
+
+
+11/11/2013 - 12/15/2014
+
+
+
+A) What to Avoid ? 
+
+
+
+
+-> 5 year should not be a drop (end point < start point in the period):
+	-> 5  year (go by percentile as well... to endure stable pattern; point should be in the middle 40th-60th percentile ?)
+
+
+
+-> 1 year must not be decreasing, but the increase % should be low:
+
+
+-> MA 52 must be uppity
+
+
+-> Monitior Magintitude of Change... should be not huge change
+
+
+-> monitor huge spikes --> avoid recent spikes :
+	-> MAX and MIN should not differ by huge amount (Range)
+	-> MA(52) is on upward (for a period of a month minimum)
+
+
+# MA 52 approaching MA 200
+
+
+7/28/2014
+
